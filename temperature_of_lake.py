@@ -8,18 +8,6 @@ Type "help", "copyright", "credits" or "license()" for more information.
 >>> for table in soup.select('.x-table > .x-row'):
 	m.append([])
 	temperature_of_lake = table.select_one('.x-cell-water-temp').get_text(strip = True)
-	link [c for c in table.select('.x-cell > .link')]
-	
-SyntaxError: invalid syntax
->>> for table in soup.select('.x-table > .x-row'):
-	m.append([])
-	temperature_of_lake = table.select_one('.x-cell-water-temp').get_text(strip = True)
-	link [c for c in table.select('.x-cell > .link')]
-	
-SyntaxError: invalid syntax
->>> for table in soup.select('.x-table > .x-row'):
-	m.append([])
-	temperature_of_lake = table.select_one('.x-cell-water-temp').get_text(strip = True)
 	link = [c for c in table.select('.x-cell > .link')]
 	lake = link[0].text
 	m[-1].append(temperature_of_lake)
